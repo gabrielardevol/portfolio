@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .row {
+      display: flex; /* set the container to use flex layout */
+      align-items: center;
+            margin-left: 2.5em;
+
+    }
+    #row3, #row4 {
+      justify-content: flex-end;
+      margin-right: 2.5em;
+    }
+
+    .text {
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      font-size: 2.4em;
+      /* -webkit-text-stroke: 5px whitesmoke; */
+
+    }
+    .characterContainer {
+      font-family: 'Roboto', sans-serif;
+      font-size: 3.7em;
+      transition: width 0.8s ease-in-out, height 0.8s ease-in-out;
+      border-radius: 5em;
+
+      width: 1.2em;
+      height: 1.2em;
+      display: flex;                                                            /* vertical align */
+      align-items: center;                                                      /* vertical align */
+      justify-content: center;                                                  /* horizontal align */
+    }
+  </style>
+</head>
+<body style="background-color: whitesmoke">
+
+<div style="">
+  <div style="display: grid; grid-template-columns: 1fr 1fr; height: 90vh">
+    <div style="
+    /* display: block;
+    padding: 7.5vw */
+    justify-self: center;
+    align-self: center;
+    min-width: 75%
+    ">
+      <div id="container" style=""></div>
+    </div>
+  <div style="justify-self: center; align-self: center;" class="text">
+  my portfolio<br>under construction</div>
+  </div>
+</div>
+
+  <script>
+  function createRows() {                                                       //sets the rows where elements will be placed
+    for (var i = 0; i < (string.length / columns); i++) {                       //iterator
+    row = container.appendChild(document.createElement("div"))                  //adds html row to html container
+    row.id = `row${i + 1}`;                                                     // gives ID to row
+    row.className = "row"}                                                      //assigns css class to row
+  }
+
+  function createElements(){                                                    //creates the elements for a given string and places the elements in the rows
+  for (var i = 0; i < string.length; i++) {                                      //iterator
+    row = document.querySelector(`#row${(Math.ceil(((i) / columns)+0.1))}`)     // determines which row belongs to the iterated element
+    div = row.appendChild(document.createElement("div"));                        // creates the element div
+    div.id = `element${i+1}`                                                    // gives ID to element (it's index plus one)
+    div.className = "characterContainer"                                        //assigns css class to element
+    div.textContent = `${string[i]}`                                            // fills the element with text
+    function dataSetRows(i){                                                    // dataset guides interaction between elements
+      elements = document.querySelectorAll(".characterContainer");              //this variable is still not full scope
+      if (elements[i].textContent != " ") {                                     // spaces between words don't get dataset
+        elements[i].setAttribute("data-row", `${(Math.ceil(((i) / columns)+0.1))//parent row
+        }`);
+        elements[i].setAttribute("data-active", "true");                        // indicates that the element is visible
+        elements[i].setAttribute("data-merged", "false")}                       // indicates that the element contains one character
+    }
+    dataSetRows(i)
+    randomColorize(i)
+  }}
+
+  function randomColorize(i) {
+    const colors = ['#FF7373', '#739AFF', '#5BB8D6', '#FF9473'];
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    const randomColor = colors[randomIndex];
+    if(elements[i].dataset.active) {                                            //blank spaces of string appear transparent
+    elements[i].style.backgroundColor = randomColor;}
+  }
+
+  function action() {
+    //randomColorize(0)                                                         //will change color of first element
+    for (var i = 0; i < (string.length - 1); i++) {
+      if (elements[i].dataset.active == "true" && elements[i].dataset.merged == "false" && elements[i+1].dataset.merged == "false") {
+        if(Math.random()<0.75){merge(i)};
+      } else if (elements[i].dataset.active == "true" && elements[i].dataset.merged == "true") {
+        if(Math.random()<0.75){split(i)};
+      }
+    }
+  }
+
+  function merge(i) {
+    if(elements[i].dataset.row === elements[i+1].dataset.row){
+    elements[i].dataset.merged = "true";
+    elements[i].textContent += `${elements[i+1].textContent}`
+    increaseWidth(i)
+    hyde(i)}
+  }
+
+  function hyde(i) {
+    if (elements[i+1].textContent != " ") {elements[i+1].dataset.active = "false";} //sets "active" (not to blank spaces) TODO: apply hyde() function
+    deleteWidth(i+1)
+  }
+
+  function split(i) {
+    elements[i].textContent = `${elements[i].textContent[0]}`
+    decreaseWidth(i)
+    elements[i].dataset.merged = "false";
+    elements[i+1].style.display = "flex"
+    elements[i+1].dataset.active = "true"
+    randomColorize(i+1)
+    restoreWidth(i+1)
+  }
+
+  function increaseWidth(i) {
+    elements[i].style.width = "1.8em";
+  }
+
+  function decreaseWidth(i) {
+    elements[i].style.width = "1.2em";
+  }
+
+  function deleteWidth(i) {
+    elements[i].style.width = "0em";
+    elements[i].style.height = "0em";
+    elements[i].style.color = "transparent";
+  }
+
+  function restoreWidth(i) {
+    elements[i].style.width = "1.2em";
+    elements[i].style.height = "1.2em";
+    elements[i].style.color = "black";
+    randomColorize(i+1)
+
+  }
+
+  var string = "gabriel ardèvol"// MODIFY THE DISPLAYED TEXT HERE
+  var columns = 4
+
+  var container = document.querySelector("#container");
+  createRows();
+  createElements();
+  elements = document.querySelectorAll(".characterContainer"); // turn to a separate function
+
+  setInterval(action, 2700);
+
+  </script>
+</body>
+</html>
