@@ -1,0 +1,23 @@
+header {
+  font-weight: 700;
+  color: white;
+  background-color: $blau;
+  border-radius: 50px;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.menu-option {
+  font-weight: 700;
+  background-color: $groc;
+  //max-width: 10vw;
+  border-radius: 50px;
+  margin-top: 0.3em;
+  text-align: center;
+
+}
+
+.menu-option:hover {
+  background-color: black;
+  color: white;
+}

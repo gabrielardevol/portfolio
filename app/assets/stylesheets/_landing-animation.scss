@@ -1,0 +1,29 @@
+.row {
+  display: flex; /* set the container to use flex layout */
+  align-items: center;
+  margin-left: 2.5em;
+}
+
+#row3, #row4 {
+  justify-content: flex-end;
+  margin-right: 2.5em;
+}
+
+.text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 2.4em;
+  /* -webkit-text-stroke: 5px whitesmoke; */
+}
+.characterContainer {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.7em;
+  transition: width 0.8s ease-in-out, height 0.8s ease-in-out;
+  border-radius: 5em;
+
+  width: 1.2em;
+  height: 1.2em;
+  display: flex;                                                            /* vertical align */
+  align-items: center;                                                      /* vertical align */
+  justify-content: center;                                                  /* horizontal align */
+}

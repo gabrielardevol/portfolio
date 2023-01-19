@@ -10,7 +10,61 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body style="width: 90%; margin: auto">
+
+    <header>gabriel ardèvol — web development</header>
+
+    <div style="display: grid; grid-template-columns: 1fr 6fr 1fr; grid-gap: 1em">
+
+      <div id="leftside"></div>
+
+
+
+      <div>
+        <%= yield %>
+      </div>
+
+      <div id="rightside"></div>
+
+    </div>
+
   </body>
+
+
+  <script>
+  rightside = document.getElementById("rightside");
+  leftside = document.getElementById("leftside");
+  leftside.innerHTML = "<div id='menu'> \
+        <% ['about me','projects','contact'].each do |word|%> \
+        <div class='menu-option'> \
+          <%= word %> \
+        </div> \
+        <% end %> \
+      </div>";
+
+
+  document.addEventListener("mousemove", function(event) {
+    var x = event.pageX;
+    if(x <= (window.innerWidth / 4)){
+        leftside.innerHTML = "<div id='menu'> \
+        <% ['about me','projects','contact'].each do |word|%> \
+        <div class='menu-option'> \
+          <%= word %> \
+        </div> \
+        <% end %> \
+      </div>"; rightside.innerHTML = ""
+    }else if(x >= (window.innerWidth - (window.innerWidth / 4))){
+       rightside.innerHTML = "<div id='menu'> \
+        <% ['about me','projects','contact'].each do |word|%> \
+        <div class='menu-option'> \
+          <%= word %> \
+        </div> \
+        <% end %> \
+      </div>"; leftside.innerHTML = ""
+    }
+    //var y = event.pageY;
+    console.log(window.innerWidth)
+    console.log("Mouse position: (" + x + ")");
+});
+  </script>
 </html>
