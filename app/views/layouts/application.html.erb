@@ -12,7 +12,7 @@
 
   <body style="width: 90%; margin: auto">
 
-    <header>gabriel ardèvol — web development</header>
+    <header class="blau">gabriel ardèvol — web development</header>
 
     <div style="display: grid; grid-template-columns: 1fr 6fr 1fr; grid-gap: 1em">
 
@@ -34,9 +34,9 @@
   <script>
   rightside = document.getElementById("rightside");
   leftside = document.getElementById("leftside");
-  leftside.innerHTML = "<div id='menu'> \
+  leftside.innerHTML = "<div class='menu'> \
         <% ['about me','projects','contact'].each do |word|%> \
-        <div class='menu-option'> \
+        <div class='menu-option groc'> \
           <%= word %> \
         </div> \
         <% end %> \
@@ -46,19 +46,23 @@
   document.addEventListener("mousemove", function(event) {
     var x = event.pageX;
     if(x <= (window.innerWidth / 4)){
-        leftside.innerHTML = "<div id='menu'> \
+        leftside.innerHTML = "<div class='menu'> \
         <% ['about me','projects','contact'].each do |word|%> \
-        <div class='menu-option'> \
-          <%= word %> \
-        </div> \
+        <a href='<%=word%>'> \
+          <div class='menu-option groc'> \
+            <%= word %> \
+          </div> \
+        </a> \
         <% end %> \
       </div>"; rightside.innerHTML = ""
     }else if(x >= (window.innerWidth - (window.innerWidth / 4))){
-       rightside.innerHTML = "<div id='menu'> \
+       rightside.innerHTML = "<div class='menu'> \
         <% ['about me','projects','contact'].each do |word|%> \
-        <div class='menu-option'> \
-          <%= word %> \
-        </div> \
+        <a href='<%=word%>'> \
+          <div class='menu-option groc'> \
+            <%= word %> \
+          </div> \
+        </a> \
         <% end %> \
       </div>"; leftside.innerHTML = ""
     }

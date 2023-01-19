@@ -1,0 +1,43 @@
+
+
+
+.hashtags {
+    font-size: 0.85em;
+    position: absolute;
+    bottom: 0.6em;
+    right: 0.4em;
+    display: flex;
+    max-height: 2em;
+}
+
+.hashtags-container {
+   position: relative;
+}
+.hashtag {
+  background-color: white;
+  border-radius: 50px;
+  margin: 0.1em;
+  padding: 0.4em;
+}
+
+.project-card {
+    width: 20vw;
+    background-color: transparent;
+  img {
+    //height: 22vh;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+  }
+}
+
+.card-text {
+  font-size: 0.9em;
+  padding: 1em;
+  margin-top: -0.3em;
+  background-color: white;
+  //width: 100%;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+}

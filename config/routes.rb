@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
   get "about", to: "pages#about"
 
+  get 'projects', to: 'projects#index'
+  get 'projects/project', to: 'projects#show'
+
 
   # Defines the root path route ("/")
   # root "articles#index"

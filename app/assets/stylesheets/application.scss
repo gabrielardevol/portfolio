@@ -5,6 +5,7 @@ $groc: #FF9473;
 
 @import "landing-animation";
 @import "header";
+@import "project-card";
 mark {
   display: inline-block;
   line-height: 0em;
@@ -12,25 +13,17 @@ mark {
   background-color: $verd;
 }
 
-
-.project-card {
-
-
-  img {
-    width: 100%;
-    //height: 22vh;
-    object-fit: cover;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-  }
-
-  p {
-    width: 100%;
-    margin: none;
-    background-color: white;
-    padding: 0.5em;
-
-  }
+.blau {
+  background-color: $blau;
+}
+.groc {
+  background-color: $groc;
+}
+.verd {
+  background-color: $verd;
+}
+.vermell {
+  background-color: $vermell;
 }
 
 body {

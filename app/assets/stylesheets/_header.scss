@@ -1,15 +1,17 @@
 header {
   font-weight: 700;
   color: white;
-  background-color: $blau;
+  //background-color: $blau;
   border-radius: 50px;
   margin-top: 1em;
   text-align: center;
+
+  top: 2vh;
 }
 
 .menu-option {
   font-weight: 700;
-  background-color: $groc;
+  //background-color: $groc;
   //max-width: 10vw;
   border-radius: 50px;
   margin-top: 0.3em;
@@ -20,4 +22,13 @@ header {
 .menu-option:hover {
   background-color: black;
   color: white;
+}
+
+header, .menu {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+}
+
+.menu {
+  top: 6vh;
 }
