@@ -1,17 +1,15 @@
 
-
-
 .hashtags {
-    font-size: 0.85em;
-    position: absolute;
-    bottom: 0.6em;
-    right: 0.4em;
-    display: flex;
-    max-height: 2em;
+  font-size: 0.85em;
+  position: absolute;
+  bottom: 0.6em;
+  right: 0.4em;
+  display: flex;
+  max-height: 2em;
 }
 
 .hashtags-container {
-   position: relative;
+  position: relative;
 }
 .hashtag {
   background-color: white;
@@ -23,12 +21,14 @@
 .project-card {
     width: 20vw;
     background-color: transparent;
+    margin: auto;
+
   img {
     //height: 22vh;
     width: 100%;
     object-fit: cover;
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
+    border-top-left-radius: 0.6em;
+    border-top-right-radius: 0.6em;
   }
 }
 
@@ -38,6 +38,44 @@
   margin-top: -0.3em;
   background-color: white;
   //width: 100%;
-  border-bottom-left-radius: 1em;
-  border-bottom-right-radius: 1em;
+  border-bottom-left-radius: 0.6em;
+  border-bottom-right-radius: 0.6em;
+}
+
+
+.show-hashtag {
+  padding: 0em 0.6em;
+  border-radius: 50px;
+  margin-right: 0.2em;
+}
+
+#projects-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 1.8em 1.8em;
+}
+
+@media screen and (max-width: 1000px) {
+  #projects-grid {
+   grid-template-columns: 1fr 1fr;
+  }
+  .project-card {
+    width: 30vw;
+ }
+}
+
+@media screen and (max-width: 800px) {
+  #projects-grid {
+   grid-template-columns: 1fr;
+  }
+  .project-card {
+    width: 60vw;
+ }
+}
+
+@media screen and (max-width: 400px) {
+
+  .project-card {
+    width: 90vw;
+ }
 }

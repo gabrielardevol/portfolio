@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 
   get 'projects', to: 'projects#index'
   get 'projects/project', to: 'projects#show'
-
+  get 'about me', to: "pages#about"
+  get 'contact', to: "pages#contact"
 
   # Defines the root path route ("/")
   # root "articles#index"

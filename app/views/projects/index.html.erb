@@ -1,24 +1,27 @@
-<h2><mark style= " margin-top: 1.5em">Check my projects</mark></h2>
-<div style="display: grid; grid-template-columns: auto auto auto ;  grid-gap: 1.8em 1.8em;">
+<h2><mark style= " margin-top: 1em">🪴Check my projects</mark></h2>
+<div id="projects-grid">
   <% ["project1","project2","project3","project4", "project5", "project6", "project7"].each do |project|%>
   <div class="project-card">
-    <div class="hashtags-container"><img src="https://via.placeholder.com/400x300" alt="">
+    <div class="hashtags-container">
+    <img src="https://via.placeholder.com/400x300" alt="">
   <div class="hashtags">
     <div class="hashtag">ruby</div>
     <div class="hashtag">ruby on rails</div>
     <div class="hashtag">javascript</div>
   </div>
-    </div>
+  </div>
     <div class="card-text">
       <a href="/projects/project"><b><%= project %></b></a>
       <br> you've really put a lot of dedication on this. Enjoy while you show it to people.
     </div>
   </div>
   <% end %>
-
-
-
-<% %>
-<% %>
-<% %>
 </div>
+
+
+<script>
+// menuOption = window.onload.querySelector(".menu-option-projects");
+// console.log(menuOption)
+// console.log("yes")
+
+</script>

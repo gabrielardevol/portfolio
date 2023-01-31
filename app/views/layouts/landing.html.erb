@@ -10,9 +10,10 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body style="width: 90%; margin: auto">
 
-    <a href="/"><header class="blau">gabriel ardèvol — web development</header></a>
+    <%= yield %>
+<%#
+    <a href="/"><header class="blau font-mono" style="font-weight: 500">gabriel ardèvol — web development</header></a>
 
     <div id= "header-grid">
 
@@ -20,13 +21,10 @@
 
 
 
-      <div>
-        <%= yield %>
-      </div>
 
       <div id="rightside"></div>
 
-    </div>
+    </div> %>
 
   </body>
 
