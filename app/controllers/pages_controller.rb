@@ -1,9 +1,11 @@
 
 class PagesController < ApplicationController
-  def home
-  end
+  helper_method :string_to_array
 
-  def landing
+
+  def home
+    @projects = Project.all
+
     render layout: "landing"
   end
 

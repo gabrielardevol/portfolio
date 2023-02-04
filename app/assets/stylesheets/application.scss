@@ -11,7 +11,13 @@ $groc: #FF9473;
 @import "header";
 @import "project-card";
 
-
+.text-overflow {
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 
 #skills > li {
   min-height: 5em;
@@ -72,6 +78,9 @@ mark {
   color: $verd }
 .text-blau {
   color: $blau }
+.text-blanc {
+  color: white;
+}
 
 body {
   background-color: whitesmoke;
@@ -107,4 +116,24 @@ body {
     font: 800 60px Arial;
     -webkit-text-fill-color: yellow;
     -webkit-text-stroke: 2px;
+  }
+
+
+  #skill-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  @media screen and (max-width: 800px) {
+    #skill-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;}
+  }
+
+  @media screen and (max-width: 600px) {
+    #skill-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;}
+  }
+
+  @media screen and (max-width: 520px) {
+    #skill-grid{
+    grid-template-columns: 1fr 1fr 1fr;}
   }

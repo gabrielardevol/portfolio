@@ -1,32 +1,42 @@
-<div
-<%# class="grid"  %>
-<%# style = "display: grid; grid-template-columns: 1fr 1fr; gap: 3%; align-items: center; background-color: white; border-radius: 1em; margin-top: 8vh" %>
->
+<div style = "display: grid; grid-template-columns: 1fr 1fr; gap: 3%; align-items: center; background-color: white; border-radius: 1em; margin-top: 8vh; padding: 1.2em">
 
-  <div style="margin-top: 2.9em">
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+  <div>
 
-      <div style="font-size: 1.6em">That beautiful project</div>
-      <div style=" display: flex; justify-content: flex-end; color: grey">January 2012 - February 2023</div>
+    <div style="display: grid; grid-template-columns: auto auto;">
+
+      <div style="font-size: 1.6em" class="font-mono"><%= @project.title %></div>
+      <div style=" display: flex; justify-content: flex-end; color: grey"><%= @project.date %></div>
 
     </div>
 
-   <div class="show-hashtags" style="display: flex; max-width: 0em;">
-      <div class="show-hashtag border-vermell">Vermell</div>
-      <div class="show-hashtag border-blau">Blau</div>
-      <div class="show-hashtag border-verd">Verd</div>
+   <div class="show-hashtags" style="display: flex; flex-wrap: wrap;">
+      <% hashtags = string_to_array(@project.hashtags, ",") %>
+      <% hashtags.each do |hashtag| %>
+      <div class="show-hashtag border-blau font-mono"><%=hashtag%></div>
+
+
+      <%# <div class="show-hashtag border-vermell"><%=hashtag%>
+      <% end %>
     </div>
 
-    <div class="regular-text" style="margin-top: 0.7em">
-      Eco-Friendly City is a visionary initiative that aims to make our urban environments more sustainable and environmentally friendly. The project is driven by a team of dedicated experts from various fields, including urban planning, architecture, engineering, and environmental science.
-      Our goal is to create a city that not only meets the needs of its citizens, but also reduces its ecological footprint. We plan to achieve this by incorporating a wide range of sustainable practices and technologies into the city's design.
-      Some of the key features of Eco-Friendly City include:
-      ergy-efficient buildings: All buildings in the city will be designed to use less energy and water, making them more cost-effective and environmentally friendly.
-      Renewable energy: The city will be powered by a combination of solar, wind, and geothermal energy, reducing its dependence on fossil fuels.
-      Green transportation: Eco-Friendly City will prioritize pedestrian, bicycle and public transportation, reducing the number of cars on the road and decreasing air pollution.
-      Green spaces: The city will feature numerous parks, gardens, and green roofs, providing residents with access to nature and helping to improve air quality.    </div>
+    <div class="font-sans" style="margin-top: 0.7em">
+      <%= @project.description %>
     </div>
+  </div>
+
+
+  <div id="image-container">
+    <% images = string_to_array(@project.images, ",") %>
+    <%= image_tag(images[0], style: "margin: auto", id: "main-image") %>
+    <div id="small-images">
+    <% images.each do |image|%>
+    <%= image_tag(image, style: "margin: auto")%>
+    <% end%>
+
+    </div>
+  </div>
+
 
     <img src="https://via.placeholder.com/300" style="">
 

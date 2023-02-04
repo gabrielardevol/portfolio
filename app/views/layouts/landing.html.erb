@@ -31,31 +31,31 @@
 
   <script>
 
-  contingut = "<div class='menu'> \
-        <% ['about me','projects','contact'].each do |word|%> \
-        <a href='/<%=word%>'>\
-        <div class='menu-option'> \
-            <%= word %> \
-          </div> \
-        <% end %> \
-        </a>\
-      </div>"
+//   contingut = "<div class='menu'> \
+//         <% ['about me','projects','contact'].each do |word|%> \
+//         <a href='/<%=word%>'>\
+//         <div class='menu-option'> \
+//             <%= word %> \
+//           </div> \
+//         <% end %> \
+//         </a>\
+//       </div>"
 
-  rightside = document.getElementById("rightside");
-  leftside = document.getElementById("leftside");
-  leftside.innerHTML = contingut;
+//   rightside = document.getElementById("rightside");
+//   leftside = document.getElementById("leftside");
+//   leftside.innerHTML = contingut;
 
 
-  document.addEventListener("mousemove", function(event) {
-    var x = event.pageX;
-    if(x <= (window.innerWidth / 4)){
-        leftside.innerHTML = contingut;
-        rightside.innerHTML = ""
-    }else if(x >= (window.innerWidth - (window.innerWidth / 4))){
-       rightside.innerHTML = contingut; leftside.innerHTML = ""
-    }
-    //var y = event.pageY;
+//   document.addEventListener("mousemove", function(event) {
+//     var x = event.pageX;
+//     if(x <= (window.innerWidth / 4)){
+//         leftside.innerHTML = contingut;
+//         rightside.innerHTML = ""
+//     }else if(x >= (window.innerWidth - (window.innerWidth / 4))){
+//        rightside.innerHTML = contingut; leftside.innerHTML = ""
+//     }
+//     //var y = event.pageY;
 
-});
+// });
   </script>
 </html>

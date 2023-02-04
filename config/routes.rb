@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # root                   to: "pages#home"
-  root to: "pages#landing"
+  root to: "pages#home"
+
+  resources :projects
 
   get "about", to: "pages#about"
 
   get 'projects', to: 'projects#index'
-  get 'projects/project', to: 'projects#show'
+  get 'projects/:id', to: 'projects#show'
   get 'about me', to: "pages#about"
   get 'contact', to: "pages#contact"
 
