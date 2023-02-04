@@ -1,12 +1,12 @@
-<div style = "display: grid; grid-template-columns: 1fr 1fr; gap: 3%; align-items: center; background-color: white; border-radius: 1em; margin-top: 8vh; padding: 1.2em">
+<div style = "display: grid; grid-template-columns: 1fr 1fr; gap: 3%; align-items: center;  margin-top: 8vh; ">
 
 
-  <div>
+  <div style= "padding: 1em 1em 1em 1em; background-color: white; border-radius: 1em;">
 
-    <div style="display: grid; grid-template-columns: auto auto;">
+    <div style="display: grid; grid-template-columns: auto auto; ">
 
       <div style="font-size: 1.6em" class="font-mono"><%= @project.title %></div>
-      <div style=" display: flex; justify-content: flex-end; color: grey"><%= @project.date %></div>
+      <div style=" display: flex; justify-content: flex-end; color: grey" class="font-mono"><%= @project.date %></div>
 
     </div>
 
@@ -26,19 +26,27 @@
   </div>
 
 
-  <div id="image-container">
+  <div id="image-container" style="width: 100%; margin: auto">
     <% images = string_to_array(@project.images, ",") %>
-    <%= image_tag(images[0], style: "margin: auto", id: "main-image") %>
+    <%= image_tag(images[0], style: "margin: auto; width: 100%", id: "main-image") %>
     <div id="small-images">
     <% images.each do |image|%>
-    <%= image_tag(image, style: "margin: auto")%>
+    <%= image_tag(image, class: "small-image", style: "width: 4em; height: 4em; margin: 0.1em; border: 4px solid white;")%>
     <% end%>
 
     </div>
   </div>
-
-
-    <img src="https://via.placeholder.com/300" style="">
-
-
 </div>
+
+<script>
+smallImages = document.querySelectorAll(".small-image")
+mainImage = document.querySelector("#main-image")
+
+for (let i = 0; i < smallImages.length; i++) {
+  smallImages[i].addEventListener('click', function() {
+    mainImage.src = smallImages[i].src
+    //console.log(smallImages[i].src)
+    // Your event handler logic here
+  });
+}
+</script>

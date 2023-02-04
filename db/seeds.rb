@@ -17,7 +17,7 @@ Project.create({
   la distància a recórrer, la força del llop o la duració del joc.
   Per a jugar-los es requereix d’una consola que accepti emojis; jo he utilitzat la de Visual Studio Code.
   ".html_safe,
-  images: "projects/pigs1.gif, projects/pigs1.gif",
+  images: "projects/pigs1.gif,projects/pigs2.gif",
   hashtags: "ruby, MVC",
   github_link: "https://github.com/gabrielardevol/els-tres-porquets"
   })
@@ -34,7 +34,7 @@ Project.create(
   Pels diversos apartats he seguit amb una voluntat austera, utilitzant una graella molt versàtil.
   Durant els propers mesos procuraré enriquir el contingut i posar a prova altres propostes de disseny.
   ".html_safe,
-  images: "projects/celler1.gif, projects/pigs1.gif",
+  images: "projects/celler1.gif,projects/pigs1.gif",
   hashtags: "ruby on rails, Javascript, CSS, HTML",
 
   github_link: "https://github.com/gabrielardevol/celler-ardevol"
@@ -43,12 +43,12 @@ Project.create(
 
   Project.create(
     {
-    title: "Portfolio",
+    title: "JS Lettering",
     date: "Gener - febrer 2023",
     description: "El meu portfoli en construcció
     ".html_safe,
-    images: "projects/porfoli1.gif, projects/pigs1.gif",
-    hashtags: "ruby on rails, Javascript, CSS, HTML",
+    images: "projects/porfoli1.gif,projects/pigs1.gif",
+    hashtags: "Javascript, CSS, HTML",
 
     github_link: "https://github.com/gabrielardevol/celler-ardevol"
     }

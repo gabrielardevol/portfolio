@@ -11,6 +11,10 @@ $groc: #FF9473;
 @import "header";
 @import "project-card";
 
+.lateral-margin {
+  width: 90% ; margin: auto;
+}
+
 .text-overflow {
   display: -webkit-box;
   max-width: 100%;
@@ -123,6 +127,10 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 
+  .home-title {
+    width: fit-content; margin: auto
+  }
+
   @media screen and (max-width: 800px) {
     #skill-grid{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;}
@@ -136,4 +144,8 @@ body {
   @media screen and (max-width: 520px) {
     #skill-grid{
     grid-template-columns: 1fr 1fr 1fr;}
+
+    .home-title {
+      width: 100%; text-align: center
+    }
   }

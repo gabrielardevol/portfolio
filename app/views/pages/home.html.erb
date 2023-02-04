@@ -32,7 +32,7 @@
 
 
 
-  <div style="position: relative; z-index: 1; width: 90%; margin: auto;">
+  <div style="position: relative; z-index: 1">
    <br>
    <%# <a href="/"><header class="negre font-mono" style="font-weight: 600; width: 75%; margin: auto">gabriel ardèvol — web development</header></a> %>
 
@@ -43,18 +43,18 @@
       <%# M I D D L E   G R I D %>
       <div style="position: relative">
 
-        <div style="display: flex; justify-content: space-between; margin-top: 1em">
-          <h2 class="negre text-blanc font-mono" style="margin: auto">Gabriel Ardèvol </h2>
+        <%# <div style="display: flex; justify-content: space-between; margin-top: 1em"> %>
+          <h2 class="negre text-blanc font-mono home-title">Gabriel Ardèvol </h2>
 
           <%# <%=image_tag("newtab.png", width: "100%", alt: "open in a new tab", height: 15, width: 15) %>
-        </div>
+        <%# </div> %>
 
         <div class= "font-sans"style="display: flex; font-size: 0.9em">
 
           <div>
             <div style="display: flex; font-size: 0.9em; width: fit-content; margin: auto; " class="font-mono"><a href=""class="verd">Short bio</a> | <a href="" class="blau">Long bio</a> | <a href=""class="vermell">Some music?</a></div>
             <br>
-            <div style="background-color: white">Welcome to my website and porfolio, I am a front-end web developer with full-stack capabilities. . If you’re here it’s probably because I’m looking for a job.
+            <div style="background-color: white" class= "lateral-margin">Welcome to my website and porfolio, I am a front-end web developer with full-stack capabilities. . If you’re here it’s probably because I’m looking for a job.
             Both in my career and personal life, I seek for ways to be playful while remaining profesional, creative and efective.
             As a designer i believe functionality is more important than aesthetics, but also that a unique visuality has it's own functionality in making something unique.
             If you are looking for that extra human value that IA’s can’t give, I might be your person.                 <%# <iframe style="border-radius:12px; max-width: 30%" src="https://open.spotify.com/embed/playlist/5dXE4JcY0emBX7hMqtFpQp?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> %>
@@ -65,7 +65,7 @@
 
         <br><br><br>
         <%# <h2><mark style="margin-top: 1em" class="verd font-serif">🎯Skills / knowledge</mark></h2> %>
-          <h2 class="negre text-blanc font-mono" style="margin: auto; width: fit-content">🎯Skills & knowledge</h2>
+          <h2 class="negre text-blanc font-mono home-title">🎯Skills & knowledge</h2>
         <br>
         <div id="skill-grid" style="background-color: transparent; display: grid; align-items: center; place-items: center; border-radius: 8px; padding: 10px">
            <% array = [
@@ -103,7 +103,7 @@
         <br><br><br>
 
 
-        <h2 class="negre text-blanc font-mono" style="margin: auto; width: fit-content">🪴Check my projects</h2>
+        <h2 class="negre text-blanc font-mono home-title">🪴Check my projects</h2>
         <br> <br>
         <div id="projects-grid">
           <% @projects.reverse.each do |project|%>
