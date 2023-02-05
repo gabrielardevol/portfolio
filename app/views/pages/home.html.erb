@@ -105,7 +105,25 @@
 
         <h2 class="negre text-blanc font-mono home-title">🪴Check my projects</h2>
         <br> <br>
+        <div id="projects-grid">
+          <% @projects.reverse.each do |project|%>
 
+          <div class="project-card font-sans" style="font-size: 0.9em">
+            <%= link_to project_path(project), style: "text-decoration: none; color: black" do %>
+
+            <div style="position: relative;">
+            <% images = string_to_array(project.images, ",") %>
+            <%= image_tag(images[0], style: "opacity: 0.95") %>
+
+            <div class="hashtags">
+
+                <% hashtags = string_to_array(project.hashtags, ",") %>
+                <% hashtags.each do |hashtag| %>
+                <div class="hashtag"><%= hashtag %></div>
+
+              <% end %>
+          </div>
+          </div>
 
             <div style =  "padding: 1em;
               margin-top: -0.3em;
