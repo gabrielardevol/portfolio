@@ -1,4 +1,4 @@
-
+require_relative "projects_controller"
 class PagesController < ApplicationController
   helper_method :string_to_array
 
