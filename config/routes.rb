@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   get 'about me', to: "pages#about"
   get 'contact', to: "pages#contact"
 
+  get '/app/assets/CV_ENG.pdf', to: 'static#show'
+
+
   # Defines the root path route ("/")
   # root "articles#index"
 end

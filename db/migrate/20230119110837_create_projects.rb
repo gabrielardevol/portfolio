@@ -7,6 +7,8 @@ class CreateProjects < ActiveRecord::Migration[7.0]
       t.string "hashtags"
       t.string "github_link"
       t.string "date"
+      t.string "html_safe"
+
       t.timestamps
     end
   end

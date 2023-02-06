@@ -19,7 +19,8 @@ Project.create({
   ".html_safe,
   images: "projects/pigs1.gif,projects/pigs2.gif",
   hashtags: "ruby, MVC",
-  github_link: "https://github.com/gabrielardevol/els-tres-porquets"
+  github_link: "https://github.com/gabrielardevol/els-tres-porquets",
+  html_safe: "",
   })
 Project.create(
   {
@@ -37,7 +38,8 @@ Project.create(
   images: "projects/celler1.gif,projects/pigs1.gif",
   hashtags: "ruby on rails, Javascript, CSS, HTML",
 
-  github_link: "https://github.com/gabrielardevol/celler-ardevol"
+  github_link: "https://github.com/gabrielardevol/celler-ardevol",
+  html_safe: "",
   }
   )
 
@@ -45,11 +47,15 @@ Project.create(
     {
     title: "JS Lettering",
     date: "Gener - febrer 2023",
-    description: "El meu portfoli en construcció
+    description: "Per a donar al mew lloc web una aparença més unica vaig pensar en un disseny colorit, que expresés el meu esperit creatiu.
+    Volia un element que transmetés el meu background en arts, així com la meva passió per la animació.
+    Realitzar aquesta visió va ser tot un repte, ja que la meva experiència amb Javascript era encara limitada.
+    Tot i que el resultat encara podria ser més polit, estic satisfet amb com dóna al meu porfoli un aire més desenfadat.
     ".html_safe,
     images: "projects/porfoli1.gif,projects/pigs1.gif",
     hashtags: "Javascript, CSS, HTML",
 
-    github_link: "https://github.com/gabrielardevol/celler-ardevol"
+    github_link: "https://github.com/gabrielardevol/celler-ardevol",
+    html_safe: "",
     }
     )
