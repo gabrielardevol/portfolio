@@ -8,14 +8,16 @@
 
 
 Project.create({
-  title: "Els tres porquets",
+  title: "Three pigs and the wolf",
   date: "Desembre 2022",
-  description: "Són dos senzills videojocs basats en el conte dels tres porquets.
-  El primer tracta de fugir del llop, i el segon de reparar la casa dels porquets abans de que el llop la tombi amb les seves bufades.
-  Estàn pensats per a ser jugats en la consola de la terminal, i se serveixen dels emojis com a mínim element gràfic de la interfaç.
-  Ambdós jocs estàn configurats amb ruby, seguint el patró MVC. Estàn escrits de manera en que facilment es poden modificar paràmetres:
-  la distància a recórrer, la força del llop o la duració del joc.
-  Per a jugar-los es requereix d’una consola que accepti emojis; jo he utilitzat la de Visual Studio Code.
+  description: "These are two simple video games based on the story of the three pigs.
+  The first is about escaping from the wolf, and the second is about repairing the pigs
+  house before the wolf blows it down.
+  They are designed to be played on the terminal console and use emojis as the minimum graphic element of the interface.
+  Both games are configured in ruby, following the MVC pattern.
+  They are written in a way that parameters can be easily modified:
+  the distance to travel, the strength of the wolf, or the duration of the game.
+  To play them, you need a console that accepts emojis; I used the Visual Studio Code console.
   ".html_safe,
   images: "projects/pigs1.gif,projects/pigs2.gif",
   hashtags: "ruby, MVC",
@@ -28,14 +30,14 @@ Project.create(
   {
   title: "Celler Ardèvol (website)",
   date: "Gener 2023",
-  description: "Aquesta és la pàgina web per al Celler Ardèvol, petita empresa familiar.
-  A més de la informàtica m’he ocupat dels continguts,  desenvolupant la pàgina desde zero de manera holística.
-  És una pàgina empresarial amb una homepage (+ landing), apartat de about, un de producte i un de contacte.
-  Està escrita amb ruby on rails, a més del frontend amb javascript, cru sense frameworks.
-  He integrat la landing page en la propia homepage, en forma de carousel que desapareix amb l’scroll,
-  buscant un resultat fluïd amb tendència minimalista.
-  Pels diversos apartats he seguit amb una voluntat austera, utilitzant una graella molt versàtil.
-  Durant els propers mesos procuraré enriquir el contingut i posar a prova altres propostes de disseny.
+  description: "This is the website for Celler Ardèvol, a small family business.
+  In addition to computer science, I was also in charge of the content,
+  developing the website from scratch in a holistic manner.
+  It is a business website with a homepage (+ landing), an about section, a product section, and a contact section.
+  It is written in ruby on rails and the frontend is in javascript, plain without frameworks.
+  I integrated the landing page into the homepage in the form of a carousel that disappears with scrolling,
+  aiming for a fluid minimalist result. For the various sections, I followed an austere approach,
+  using a very versatile grid. In the coming months, I will try to enrich the content and test other design proposals.
   ".html_safe,
   images: "projects/celler1.gif,projects/pigs1.gif",
   hashtags: "ruby on rails, Javascript, CSS, HTML",
@@ -52,13 +54,17 @@ Project.create(
     {
     title: "JS Lettering",
     date: "Gener - febrer 2023",
-    description: "Per a donar al mew lloc web una aparença més unica vaig pensar en un disseny colorit, que expresés el meu esperit creatiu.
-    Volia un element que transmetés el meu background en arts, així com la meva passió per la animació.
-    Realitzar aquesta visió va ser tot un repte, ja que la meva experiència amb Javascript era encara limitada.
-    Tot i que el resultat encara podria ser més polit, estic satisfet amb com dóna al meu porfoli un aire més desenfadat.
+    description: "To give my website a more unique appearance,
+    I thought of a colorful design that expresses my creative spirit.
+    I wanted an element that conveyed my background in the arts,
+    as well as my passion for animation.
+    Making this vision a reality was quite a challenge,
+    as my experience with Javascript was almost none.
+    Although the result could still be smoother,
+    I am satisfied with how it gives my portfolio a more relaxed look.
     ".html_safe,
     images: "projects/porfoli1.gif,projects/pigs1.gif",
-    hashtags: "Javascript, CSS, HTML",
+    hashtags: "Javascript, CSS, hardcode",
 
     github_link: "",
     html_content: "

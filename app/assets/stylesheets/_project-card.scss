@@ -6,6 +6,8 @@ $border-radius: 0.6em;
   right: 0.4em;
   display: flex;
   max-height: 2em;
+  flex-direction: column-reverse;
+  flex-wrap: wrap-reverse;
 }
 
 

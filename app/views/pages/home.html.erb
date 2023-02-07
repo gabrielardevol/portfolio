@@ -229,7 +229,7 @@ var columns = 4;
     document.querySelector("body").style.overflowY = "scroll"
   }
   landingScreen.addEventListener("click", hydeLanding)
-  landingScreen.addEventListener("keypress", hydeLanding)
+  landingScreen.addEventListener("keydown", hydeLanding)
 
 
 
@@ -252,6 +252,13 @@ var columns = 4;
   longBioButton.addEventListener("click", showLongBio)
   shortBioButton.addEventListener("click", hydeLongBio)
 
+
+
+
+
+window.onload = function() {
+  window.scrollTo(0,0);
+}
 
   </script>
 </body>
