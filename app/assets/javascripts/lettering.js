@@ -10,11 +10,11 @@ for (var i = 0; i < string.length; i++) {                                      /
   row = document.querySelector(`#row${(Math.ceil(((i) / columns)+0.1))}`)     // determines which row belongs to the iterated element
   div = row.appendChild(document.createElement("div"));                        // creates the element div
   div.id = `element${i+1}`                                                    // gives ID to element (it's index plus one)
-  div.className = "characterContainer font-mono"
+  div.className = "character-container font-mono"
   div.style.fontWeight = "500"                                        //assigns css class to element
   div.textContent = `${string[i]}`                                            // fills the element with text
   function dataSetRows(i){                                                    // dataset guides interaction between elements
-    elements = document.querySelectorAll(".characterContainer");              //this variable is still not full scope
+    elements = document.querySelectorAll(".character-container");              //this variable is still not full scope
     if (elements[i].textContent != " ") {                                     // spaces between words don't get dataset
       elements[i].setAttribute("data-row", `${(Math.ceil(((i) / columns)+0.1))//parent row
       }`);
@@ -90,12 +90,12 @@ function restoreWidth(i) {
 
 }
 
-var string = "gabriel ardèvol"// MODIFY THE DISPLAYED TEXT HERE
-var columns = 4
 
-var container = document.querySelector("#container");
+//var container = document.querySelector("#container");
+var container = document.querySelector('#container')
+var elements = document.querySelectorAll('.character-container');
 createRows();
 createElements();
-elements = document.querySelectorAll(".characterContainer"); // turn to a separate function
+ // turn to a separate function
 
 setInterval(action, 2700);

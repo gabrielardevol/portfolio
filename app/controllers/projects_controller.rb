@@ -8,7 +8,6 @@ class ProjectsController < ApplicationController
   def show
 
     @project = Project.find(params[:id])
-    render layout: "application"
 
   end
 

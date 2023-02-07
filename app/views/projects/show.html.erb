@@ -1,4 +1,18 @@
-<div style = "display: grid; grid-template-columns: 1fr 1fr; gap: 3%; align-items: center;  margin-top: 8vh; ">
+<style>
+.character-container {
+    font-size: 3vw;
+    transition: width 0.8s ease-in-out, height 0.8s ease-in-out;
+  border-radius: 5em;
+
+  width: 1.2em;
+  height: 1.2em;
+  display: flex;                                                            /* vertical align */
+  align-items: center;                                                      /* vertical align */
+  justify-content: center;
+  }</style>
+
+
+<div class="project-show text-blau">
 
 
   <div style= "padding: 1em 1em 1em 1em; background-color: white; border-radius: 1em;">
@@ -22,6 +36,15 @@
 
     <div class="font-sans" style="margin-top: 0.7em">
       <%= @project.description %>
+
+      <br>
+      <% if @project.github_link != "" || nil then  %>
+      <a href=<%=@project.github_link%> target="_blank"><%=image_tag("logos/github.png.webp", width: "22%") %><a>
+      <%end%>
+
+      <% if @project.website_url != "" || nil then  %>
+      <a href=<%=@project.website_url%> target="_blank"><%=image_tag("logos/www.png", width: "22%") %><a>
+      <%end%>
     </div>
   </div>
 
@@ -38,10 +61,11 @@
   </div>
 </div>
 
+<%=raw @project.html_content%>
+
 <script>
 smallImages = document.querySelectorAll(".small-image")
 mainImage = document.querySelector("#main-image")
-
 for (let i = 0; i < smallImages.length; i++) {
   smallImages[i].addEventListener('click', function() {
     mainImage.src = smallImages[i].src

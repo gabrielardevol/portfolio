@@ -10,10 +10,23 @@ $groc: #FF9473;
 @import "landing-animation";
 @import "header";
 @import "project-card";
+@import "project-show";
 
-.lateral-margin {
-  width: 90% ; margin: auto;
+.project-show {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3%;
+  align-items: center;
+  margin-top: 8vh;
 }
+
+@media screen and (max-width: 800px) {
+  .project-show {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
 .text-overflow {
   display: -webkit-box;

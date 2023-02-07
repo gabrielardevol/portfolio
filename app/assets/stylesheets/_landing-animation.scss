@@ -19,17 +19,6 @@
   align-items: center
 }
 
-.characterContainer {
-  font-size: 3.7em;
-  transition: width 0.8s ease-in-out, height 0.8s ease-in-out;
-  border-radius: 5em;
-
-  width: 1.2em;
-  height: 1.2em;
-  display: flex;                                                            /* vertical align */
-  align-items: center;                                                      /* vertical align */
-  justify-content: center;                                                  /* horizontal align */
-}
 
 #landing-grid {
   display: grid;

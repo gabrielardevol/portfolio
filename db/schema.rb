@@ -21,7 +21,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_19_110837) do
     t.string "hashtags"
     t.string "github_link"
     t.string "date"
-    t.string "html_safe"
+    t.string "html_content"
+    t.string "website_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

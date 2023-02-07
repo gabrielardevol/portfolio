@@ -20,7 +20,9 @@ Project.create({
   images: "projects/pigs1.gif,projects/pigs2.gif",
   hashtags: "ruby, MVC",
   github_link: "https://github.com/gabrielardevol/els-tres-porquets",
-  html_safe: "",
+  html_content: "".html_safe,
+  website_url: "",
+
   })
 Project.create(
   {
@@ -39,9 +41,12 @@ Project.create(
   hashtags: "ruby on rails, Javascript, CSS, HTML",
 
   github_link: "https://github.com/gabrielardevol/celler-ardevol",
-  html_safe: "",
+  html_content: "".html_safe,
+  website_url: "https://cellerardevol.herokuapp.com/",
   }
   )
+
+
 
   Project.create(
     {
@@ -55,7 +60,18 @@ Project.create(
     images: "projects/porfoli1.gif,projects/pigs1.gif",
     hashtags: "Javascript, CSS, HTML",
 
-    github_link: "https://github.com/gabrielardevol/celler-ardevol",
-    html_safe: "",
+    github_link: "",
+    html_content: "
+    <div id='container' style='width: fit-content; margin: 10em auto'></div>
+    <script>
+    var string = 'This is my lettering'
+    var columns = 22
+
+    </script>
+    <script src='/assets/lettering.js'>
+    </script>
+    ".html_safe,
+    website_url: "",
+
     }
     )
