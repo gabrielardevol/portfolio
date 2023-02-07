@@ -39,7 +39,7 @@ Project.create(
   aiming for a fluid minimalist result. For the various sections, I followed an austere approach,
   using a very versatile grid. In the coming months, I will try to enrich the content and test other design proposals.
   ".html_safe,
-  images: "projects/celler1.gif,projects/pigs1.gif",
+  images: "projects/celler1.gif",
   hashtags: "ruby on rails, Javascript, CSS, HTML",
 
   github_link: "https://github.com/gabrielardevol/celler-ardevol",
@@ -63,7 +63,7 @@ Project.create(
     Although the result could still be smoother,
     I am satisfied with how it gives my portfolio a more relaxed look.
     ".html_safe,
-    images: "projects/porfoli1.gif,projects/pigs1.gif",
+    images: "projects/porfoli1.gif",
     hashtags: "Javascript, CSS, hardcode",
 
     github_link: "",
