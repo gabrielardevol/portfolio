@@ -9,9 +9,7 @@ class PagesController < ApplicationController
     render layout: "landing"
   end
 
-  def about
+  def test
   end
 
-  def contact
-  end
 end

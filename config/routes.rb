@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get "about", to: "pages#about"
 
+  get "test", to: "pages#test"
+
   get 'projects', to: 'projects#index'
   get 'projects/:id', to: 'projects#show'
   get 'about me', to: "pages#about"
