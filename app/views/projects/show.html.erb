@@ -62,8 +62,9 @@
 </div>
 
 <%# <%=raw @project.html_content%>
-  <iframe  src="<%= url_for(controller: 'pages', action: 'test') %>" style="width: 100%; height: 100vh; border: none"></iframe>
-
+<% if @project.iframing.present? then %>
+  <iframe  src="<%= url_for(controller: 'pages', action: @project.iframing) %>" style="border: none;" scrolling="no" width="100%" height="auto"></iframe>
+<%end%>
 
 <script>
 smallImages = document.querySelectorAll(".small-image")

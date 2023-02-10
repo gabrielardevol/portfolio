@@ -1,0 +1,31 @@
+#home-layout {
+  width: 100%; margin: auto
+}
+
+
+.home-title {
+  width: fit-content; margin: 2em auto auto auto
+}
+
+.skills-title-small {
+  display: none;
+}
+
+@media screen and (max-width: 520px) {
+  #home-layout {
+    width: 100%;
+  }
+
+
+  .home-title {
+    width: 100%; text-align: center; margin: 0 0 0 0; padding: 0.4em 0em;
+  }
+
+  .skills-title-small {
+    display: block
+  }
+
+  .skills-titles-big {
+    display: none
+  }
+}

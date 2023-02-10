@@ -12,4 +12,14 @@ class PagesController < ApplicationController
   def test
   end
 
+  def lettering_first
+    render layout: "blank"
+
+  end
+
+  def lettering_second
+    render layout: "blank"
+
+  end
+
 end

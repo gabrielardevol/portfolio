@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get "about", to: "pages#about"
 
   get "test", to: "pages#test"
+  get "lettering_first", to: "pages#lettering_first"
+  get "lettering_second", to: "pages#lettering_second"
+
 
   get 'projects', to: 'projects#index'
   get 'projects/:id', to: 'projects#show'

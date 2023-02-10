@@ -19,7 +19,7 @@ $border-radius: 0.6em;
 }
 
 .project-card {
-    width: 20vw;
+    width: 30vw;
     background-color: black;
     margin: auto;
     border-radius: $border-radius;
@@ -55,7 +55,7 @@ $border-radius: 0.6em;
    grid-template-columns: 1fr 1fr;
   }
   .project-card {
-    width: 30vw;
+    width: 40vw;
  }
 }
 
@@ -64,13 +64,6 @@ $border-radius: 0.6em;
    grid-template-columns: 1fr;
   }
   .project-card {
-    width: 60vw;
- }
-}
-
-@media screen and (max-width: 400px) {
-
-  .project-card {
-    width: 90vw;
+    width: 80vw;
  }
 }

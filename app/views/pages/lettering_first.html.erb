@@ -1,0 +1,33 @@
+<style>
+ .character-container {
+    font-size: 1.5vw;
+    transition: width 0.8s ease-in-out, height 0.8s ease-in-out;
+  border-radius: 5em;
+
+  width: 1.2em;
+  height: 1.2em;
+  display: flex;                                                            /* vertical align */
+  align-items: center;                                                      /* vertical align */
+  justify-content: center;
+  }
+
+  @media screen and (max-width: 800px) {
+    .character-container {
+      font-size: 3.5vw;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .character-container {
+      font-size: 7vw;
+    }
+  }
+
+</style>
+  <div id='container' style='width: fit-content; margin: 1em auto'></div>
+    <script>
+    var string = 'This is mylettering,look how  it works: every two rows it   aligns to a side.'
+    var columns = 10
+    </script>
+<%= javascript_include_tag "lettering" %>
+  <iframe  src="<%= url_for(controller: 'pages', action: 'lettering_second') %>" style=" border: none" scrolling= "no" width= "100%" height= "auto"></iframe>

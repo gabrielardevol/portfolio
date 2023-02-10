@@ -78,6 +78,7 @@ Project.create(
     </script>
     ".html_safe,
     website_url: "",
+    iframing: ""
 
     }
     )
